@@ -79,7 +79,6 @@ Los siguientes valores deberán declararse directamente en el código utilizando
 | Rendimiento del vehículo (kilómetros por litro)               | `Double` |
 | Precio del combustible por litro                              | `Double` |
 | Cantidad de pasajeros                                         | `Int`    |
-| Límite máximo para considerar económico el costo por pasajero | `Double` |
 
 ---
 
@@ -104,7 +103,6 @@ Al finalizar la ejecución del programa deberán mostrarse únicamente los sigui
 | Rendimiento del vehículo                  | `12.0` km/L |
 | Precio del combustible                    | `3.74` Bs/L |
 | Cantidad de pasajeros                     |         `4` |
-| Límite para considerar económico el viaje |   `30.0` Bs |
 
 ### Salida esperada
 

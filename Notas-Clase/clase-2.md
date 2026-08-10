@@ -1,4 +1,4 @@
-# Guía práctica: primeras herramientas de Scala
+# Clase 2: Primeras herramientas de Scala
 
 En esta guía aprenderás a probar instrucciones en el **REPL**, crear y ejecutar tu primer archivo `.scala` y utilizar un **worksheet** para experimentar con varias expresiones.
 

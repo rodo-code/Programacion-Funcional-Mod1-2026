@@ -34,3 +34,18 @@ def invertirNumero(num: Int): Int = {
 }
 
 invertirNumero(1200)
+
+val x = 6
+
+def funcionA(y: Int): Int = {
+  println("funcionA")
+  x+2
+}
+
+def funcionB(z: => Int): Int = {
+  val t: Int = z + z
+  val x: Int = t * z
+  x
+}
+
+funcionB(funcionA(4))

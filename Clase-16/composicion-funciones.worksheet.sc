@@ -32,3 +32,34 @@ def generarPorDos(veces: Int): (Int => Int) = {
 val f2 = generarPorDos(5)
 f2(3)
 
+def aplicarNVeces(veces: Int,operacion: (Int => Int)): (Int => Int) = {
+  if veces == 0 then (x: Int) => x
+  else {
+    operacion.andThen(aplicarNVeces(veces-1,operacion))
+  }  
+}
+
+val sumar6Veces = aplicarNVeces(6,(x) => (x+2))
+sumar6Veces(10)
+
+// ABSTRACCION FUNCIONAL
+def operarTransformados(
+  a: Int,
+  b: Int,
+  transformacion: Int => Int,
+  operacion: (Int, Int) => Int
+): Int = {
+  operacion(
+    transformacion(a),
+    transformacion(b)
+  )
+}
+operarTransformados(6,9,(x)=>(x*2),(a,b)=>(a+b))
+// suma de cuadrados;
+operarTransformados(2,3,(x)=>(x*x),(a,b)=>(a+b))
+// producto de cuadrados;
+operarTransformados(2,3,(x)=>(x*x),(a,b)=>(a*b))
+// suma de cubos;
+operarTransformados(2,3,(x)=>(x*x*x),(a,b)=>(a+b))
+// producto de dobles.
+operarTransformados(2,3,(x)=>(x*2),(a,b)=>(a*b))

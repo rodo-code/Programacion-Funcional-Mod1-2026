@@ -53,4 +53,5 @@ numeros5.foldLeft(0)((acumulador, elemento)=>{
   else acumulador
 })
 
-
+// Se puede usar indices, pero entrar al indice k tarda O(k)
+numeros5(3)
